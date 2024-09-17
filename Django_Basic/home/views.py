@@ -4,4 +4,5 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse('first page')
+    person = {'name': 'behrouz'}
+    return render(request, 'home.html', person)
