@@ -1,8 +1,10 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from .models import Todo
 # Create your views here.
 
 
 def home(request):
-    person = {'name': 'behrouz'}
-    return render(request, 'home.html', person)
+
+    all = Todo.objects.all()
+    return render(request, 'home.html', {'todos': all})
+
