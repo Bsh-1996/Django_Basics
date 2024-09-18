@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% block title %} Home{% endblock %}
 {% block content %}
 
     {% for todo in todos %}
@@ -8,5 +9,5 @@
         <p>{{todo.body}}</p>
     {% endfor %}
 
-    
+
 {% endblock %}
