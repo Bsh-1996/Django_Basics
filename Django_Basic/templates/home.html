@@ -4,7 +4,7 @@
 {% block content %}
 
     {% for todo in todos %}
-        <a href="/detail/{{todo.id}}">{{todo.title}}</a><br>
+        <a href="{% url 'detail' todo.id %}">{{todo.title}}</a><br>
         
     {% endfor %}
 
